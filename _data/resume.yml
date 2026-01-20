@@ -3,7 +3,7 @@ demo: false
 
 # Theme customization is done on this file instead of _config.yml so that
 # you don't have to restart Jekyll to see changes.
-
+show_photo: false
 photo: "https://avatars0.githubusercontent.com/u/2410692?v=2&s=150"
 name: "Keshav Patel"
 # copy: "I'm a UI/UX Developer based in Vancouver, Canada. More than five years of experience in design/development and have a passion for giving back to the local tech community as an instructor."
