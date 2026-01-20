@@ -119,7 +119,7 @@ body.theme-dark {
   .navbar-default,
   .resume-top,
   .resume-bottom {
-    background-color: #1a1a1a;
+    background-color: #0000;
   }
 
   .panel {
@@ -292,7 +292,7 @@ a {
 /* Navbar */
 
 .navbar-default {
-  background-color: #FFF;
+  background-color: #0000;
 }
 
 .navbar {
@@ -312,6 +312,18 @@ a {
     .theme-#{$color-name} & {
       @include button-variant(#fff, map-get(map-get($all-colors, $color-name), "base"),
       darken(map-get(map-get($all-colors, $color-name), "base"), 10%));
+    }
+  }
+}
+
+/* Theme button text color */
+
+#theme-toggle-btn {
+  color: $color-base;
+
+  @each $color-name in $color-list {
+    body.theme-#{$color-name} & {
+      color: map-get(map-get($all-colors, $color-name), "base");
     }
   }
 }
@@ -422,7 +434,7 @@ script + p {
 .resume-nav {
   padding-top: 7px;
   color: #999;
-  text-align: center;
+  text-align: end;
 }
 
 .resume-dropdown {
