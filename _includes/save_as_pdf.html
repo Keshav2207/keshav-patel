@@ -1,0 +1,17 @@
+<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#saveAsPdf">
+  Save as PDF
+</button>
+<div class="modal fade" id="saveAsPdf" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-body">
+        <img src="{{ "/images/resume_print_dialog.png" | prepend:site.baseurl }}" class="img-rounded" width="400" height="342">
+        <p>Warning: Currently, ResumeCards works the best on Chrome.<br>You need to adjust the CSS for Firefox/Safari.</p>
+      </div>
+      <div class="modal-footer">
+        <button onclick="window.print()" class="btn btn-primary">Open Print Dialog</button>
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>

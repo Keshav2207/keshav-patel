@@ -597,3 +597,35 @@ script + p {
     height: 280px;
   }
 }
+
+/* Resume slider */
+
+.resume-slider {
+  overflow: hidden;
+  position: relative;
+}
+
+.resume-track {
+  display: flex;
+  transition: transform 0.4s ease;
+  will-change: transform;
+}
+
+.resume-slide {
+  flex: 0 0 33.3333%;
+  padding: 0 10px;
+}
+
+@media (max-width: 768px) {
+  .resume-slide {
+    flex: 0 0 100%;
+  }
+}
+
+.resume-track {
+  cursor: grab;
+}
+
+.resume-track:active {
+  cursor: grabbing;
+}
