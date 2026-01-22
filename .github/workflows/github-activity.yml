@@ -21,7 +21,7 @@ jobs:
               updated: .updated_at,
               stars: .stargazers_count
           }] | sort_by(.updated) | reverse | .[:5]' \
-          > _data/github.json
+          > _data/github_activity.json
 
       - name: Commit changes
         run: |
