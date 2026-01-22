@@ -1,0 +1,32 @@
+name: Update GitHub Activity
+
+on:
+  schedule:
+    - cron: "0 */12 * * *"   # twice a day
+  workflow_dispatch:
+
+jobs:
+  fetch:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Fetch GitHub repos
+        run: |
+          curl -s https://api.github.com/users/Keshav2207/repos \
+          | jq '[.[] | {
+              name: .name,
+              url: .html_url,
+              description: .description,
+              updated: .updated_at,
+              stars: .stargazers_count
+          }] | sort_by(.updated) | reverse | .[:5]' \
+          > _data/github.json
+
+      - name: Commit changes
+        run: |
+          git config user.name "github-actions"
+          git config user.email "actions@github.com"
+          git add _data/github_activity.json
+          git commit -m "Update GitHub activity" || exit 0
+          git push

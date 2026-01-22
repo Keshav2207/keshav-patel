@@ -677,3 +677,23 @@ script + p {
 .pupil {
   transition: transform 0.06s linear;
 }
+
+.activity-card {
+  border: 1px solid #e5e7eb;
+  border-radius: 12px;
+  padding: 1rem;
+}
+
+.activity-card ul {
+  list-style: none;
+  padding: 0;
+}
+
+.activity-card li {
+  margin-bottom: 0.75rem;
+}
+
+.activity-card .meta {
+  color: #6b7280;
+  font-size: 0.85rem;
+}
