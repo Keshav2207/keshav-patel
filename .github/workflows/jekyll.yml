@@ -11,6 +11,11 @@ on:
   push:
     branches: ["gh-pages"]
 
+  # Runs on successful completion of the GitHub Activity workflow
+  workflow_run:
+    workflows: ["Update GitHub Activity"]
+    types: [completed]
+
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
 
@@ -29,6 +34,9 @@ concurrency:
 jobs:
   # Build job
   build:
+    if: >
+      github.event_name == 'push' ||
+      github.event.workflow_run.conclusion == 'success'
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
