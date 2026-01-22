@@ -5,6 +5,7 @@ demo: false
 # you don't have to restart Jekyll to see changes.
 show_photo: false
 save_as_pdf: false
+show_emoji: true
 photo: "https://avatars0.githubusercontent.com/u/2410692?v=2&s=150"
 name: "Keshav Patel"
 desc: "I'm a UI/UX Developer based in Vancouver, Canada. Five years experience in design/development and my specialty is information architecture as well as rapid prototyping with scalable/modular CSS."

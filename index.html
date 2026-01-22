@@ -55,7 +55,7 @@
             </figure>
           {% endif %}
           <div class="resume-baseinfo">
-            <h1>{{ site.data.resume.name }}</h1>
+            {% include name_with_emoji.html %}
             <p>{{ site.data.resume.desc }}</p>
           </div>
         </div>
@@ -137,6 +137,7 @@
     <script src="{{ "/javascripts/jquery.min.js" | prepend:site.baseurl }}"></script>
     <script src="{{ "/javascripts/bootstrap.min.js" | prepend:site.baseurl }}"></script>
     <script src="{{ "/javascripts/resumecards.js" | prepend:site.baseurl }}"></script>
+    <script src="{{ "/javascripts/emoji.js" | prepend:site.baseurl }}"></script>
     <!-- {% include scripts.html %} -->
   </body>
 </html>

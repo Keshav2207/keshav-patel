@@ -629,3 +629,51 @@ script + p {
 .resume-track:active {
   cursor: grabbing;
 }
+
+.panel:not(.resume-slide .panel) {
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.15);
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+.panel:hover:not(.resume-slide .panel) {
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.25);
+  transform: translateY(-4px);
+}
+
+.name-with-emoji {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.emoji-wrap {
+  display: inline-flex;
+  cursor: default;
+}
+
+#emojiFace {
+  transition: transform 0.2s ease;
+}
+
+/* Face color change on hover */
+.name-with-emoji:hover #face {
+  fill: #FFCC4D;
+}
+
+/* Slight happy bounce */
+.name-with-emoji:hover #emojiFace {
+  transform: scale(1.05);
+}
+
+/* Smile reacts */
+#smile {
+  transition: d 0.2s ease;
+}
+
+.name-with-emoji:hover #smile {
+  d: path("M30 58 Q50 76 70 58");
+}
+
+.pupil {
+  transition: transform 0.06s linear;
+}

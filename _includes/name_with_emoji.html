@@ -1,0 +1,38 @@
+<h1 class="name-with-emoji">
+  {{ site.data.resume.name }}
+
+  {% if site.data.resume.show_emoji %}
+  <span class="emoji-wrap">
+    <svg
+      id="emojiFace"
+      width="35"
+      height="35"
+      viewBox="0 0 100 100"
+    >
+      <!-- Face -->
+      <circle id="face" cx="50" cy="50" r="45" fill="#FFD966"/>
+
+      <!-- Eyes -->
+      <g class="eye-group" data-x="35" data-y="42">
+        <circle cx="35" cy="42" r="6" fill="#fff"/>
+        <circle class="pupil" cx="35" cy="42" r="3" fill="#333"/>
+      </g>
+
+      <g class="eye-group" data-x="65" data-y="42">
+        <circle cx="65" cy="42" r="6" fill="#fff"/>
+        <circle class="pupil" cx="65" cy="42" r="3" fill="#333"/>
+      </g>
+
+      <!-- Smile -->
+      <path
+        id="smile"
+        d="M32 60 Q50 72 68 60"
+        fill="none"
+        stroke="#333"
+        stroke-width="4"
+        stroke-linecap="round"
+      />
+    </svg>
+  </span>
+  {% endif %}
+</h1>
