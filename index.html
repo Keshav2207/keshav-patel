@@ -63,24 +63,9 @@
           {% include nav.html %}
         </div>
       </div>
-      <div class="activity-card">
-        <h3>💻 Latest GitHub Activity</h3>
-        <ul>
-          {% for repo in site.data.github_activity %}
-            <li>
-              <a href="{{ repo.url }}" target="_blank" rel="noopener">
-                <strong>{{ repo.name }}</strong>
-              </a>
-              <span class="meta">
-                ★ {{ repo.stars }} · updated {{ repo.updated | date: "%b %d" }}
-              </span>
-              {% if repo.description %}
-                <p>{{ repo.description }}</p>
-              {% endif %}
-            </li>
-          {% endfor %}
-        </ul>
-      </div>
+      {% if site.data.resume.show_github_activity %}
+        {% include github_activity.html %}
+      {% endif %}
       <div class="row">
         {% for card in site.posts reversed %}
           <div class="col-sm-4">
